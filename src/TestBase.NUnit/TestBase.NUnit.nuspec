@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Kralizek.TestBase.NUnit</id>
+    <title>TestBase for NUnit by Kralizek</title>
+    <version>$version$</version>
+    <authors>Renato Golia</authors>
+    <owners>Renato Golia</owners>
+    <licenseUrl>https://github.com/Kralizek/TestBase.NUnit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Kralizek/TestBase.NUnit</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple package to speed up the creation of unit fixtures with NUnit</description>
+    <copyright>Copyright 2015</copyright>
+    <tags>unittesting nunit autofixture moq unittest</tags>
+    <dependencies>
+      <dependency id="Moq" version="4.2.1507.118 " />
+    </dependencies>
+  </metadata>
+</package>
