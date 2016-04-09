@@ -12,12 +12,15 @@ namespace TestBase
     public abstract class TestBase
     {
         protected IFixture Fixture;
+        protected DateTimeOffset Now;
 
         [SetUp]
         public void InitializeBase()
         {
             Fixture = new Fixture();
             CustomizeFixture(Fixture);
+
+            Now = Fixture.Create<DateTimeOffset>();
         }
 
         protected virtual void CustomizeFixture(IFixture fixture)
@@ -25,10 +28,10 @@ namespace TestBase
             fixture.Behaviors.Add(new OmitOnRecursionBehavior());
         }
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         protected virtual void SetUpFixture() { }
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         protected virtual void TearDownFixture() { }
     }
 
